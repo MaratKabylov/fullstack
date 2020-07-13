@@ -29,4 +29,4 @@ const orderSchema = new Schema({
     }
 })
 
-module.exports = mongoose.model('categories', orderSchema)
+module.exports = mongoose.model('orders', orderSchema)
