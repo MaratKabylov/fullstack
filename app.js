@@ -1,4 +1,5 @@
 const express = require('express');
+const mongoose = require('mongoose')
 const app = express()
 const bodyParser = require('body-parser')
 const authRoutes = require('./routes/auth')
@@ -6,6 +7,14 @@ const analyticsRoutes = require('./routes/analytics')
 const categoryRoutes = require('./routes/category')
 const orderRoutes = require('./routes/order')
 const positionRoutes = require('./routes/position')
+const keys = require('./config/keys')
+
+mongoose.connect(keys.mongoURI, { 
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true})
+    .then(() => console.log('MongoDB connected.'))
+    .catch(error => console.log(error))
 
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json())
