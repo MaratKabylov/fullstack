@@ -1,3 +1,4 @@
 module.exports = {
-    mongoURI: 'mongodb+srv://MaratKabylov:0o7oheG4XHPQryAc@fullstack.uaz1s.mongodb.net/fullstack?retryWrites=true&w=majority'
+    mongoURI: 'mongodb://MaratKabylov:0o7oheG4XHPQryAc@fullstack-shard-00-00.uaz1s.mongodb.net:27017,fullstack-shard-00-01.uaz1s.mongodb.net:27017,fullstack-shard-00-02.uaz1s.mongodb.net:27017/fullstack?ssl=true&replicaSet=atlas-avqpa3-shard-0&authSource=admin&retryWrites=true&w=majority'
 }
+
